@@ -1,0 +1,410 @@
+#:kivy 1.11.1
+#:import FadeTransition  
+<Screen1>:
+    but: but
+    name: 'Screen1'    
+    canvas:
+        Rectangle:
+            source: 'Screen1.jpg'
+            pos: self.pos
+            size: self.size    
+
+    Button_Start:         
+        id: but              
+        center_x: root.center_x - 70
+        center_y: root.center_y + 70 
+
+        on_press:
+            root.manager.current = 'Screen2'
+
+    Mascot1:
+        id: image
+        center_x: root.center_x + 60
+        center_y: root.center_y - 200   
+                       
+<Button_Start>: 
+      
+    image: image
+    size: 170 , 50
+    size_hint: None , None    
+    background_color: 0,0,0,0            
+            
+    Image: 
+        id: image        
+        size: 220,220
+        pos: root.center_x - 100 , root.center_y - 110
+        source: 'Button_Start.jpg'
+
+<Mascot1>:
+
+    size_hint: None , None
+    Image:
+        id: image
+        size: 150,250        
+        pos: root.center_x - 15 , root.center_y + 50
+        source: 'Mascot1.png'
+
+
+<Screen2>:
+
+    name: 'Screen2'
+    but: but    
+    canvas: 
+        Rectangle:
+            source:'Screen2.jpg'
+            pos: self.pos
+            size: self.size
+        
+
+    Button_Back2_1:
+
+        id: but
+        center_x: root.center_x - 100
+        center_y: root.center_y - 270
+
+        on_press:
+            root.manager.current = 'Screen1' 
+               
+    Button_Grade12:
+
+        id: but
+        center_x: root.center_x - 57
+        center_y: root.center_y - 180
+        # size: 210 , 210
+
+    Button_Grade11:
+
+        id: but
+        center_x: root.center_x - 57
+        center_y: root.center_y - 85
+        # size: 210 , 210
+        
+    Button_Grade10:
+
+        id: but
+        center_x: root.center_x - 57
+        center_y: root.center_y + 10
+        # size: 210 , 210
+
+        on_press:
+            root.manager.current = 'Screen3'
+
+
+        
+<Button_Grade10>:
+
+    image: image
+    size: 170 , 50
+    size_hint : None , None
+    background_color: 0,0,0,0
+    Image:
+        id: image        
+        size: 210 , 210
+        size_hint : None , None
+        pos: root.center_x - 120 , root.center_y - 100
+        source: 'Button_Grade10.PNG'
+
+<Button_Grade11>:
+
+    image: image
+    size: 170 , 50
+    size_hint : None , None
+    background_color: 0,0,0,0
+    Image:
+        id: image
+        size: 210 , 210
+        size_hint : None , None
+        pos: root.center_x - 119, root.center_y - 95
+        source: 'Button_Grade11.PNG' 
+
+<Button_Grade12>:
+
+    image: image
+    size: 170 , 50
+    size_hint : None , None 
+    background_color: 0,0,0,0       
+    Image:
+        id: image
+        size: 210 , 210
+        pos: root.center_x - 119, root.center_y - 103.5
+        source: 'Button_Grade12.PNG' 
+
+<Button_Back2_1>:
+
+    image: image
+    size: 60 , 60     
+    size_hint : None , None
+    background_color: 0,0,0,0    
+    Image:
+        id: image
+        size: 80 , 80
+        pos: root.pos
+        source: 'Button_Back.png' 
+
+
+<Screen3>:
+
+    but: but
+    name: 'Screen3'
+
+    canvas:
+        Rectangle:
+            source: 'Screen3.jpg'
+            pos: self.pos
+            size: self.size
+
+    Button_RadioActive:
+
+        id: but
+        center_x: root.center_x - 60
+        center_y: root.center_y - 110 
+
+    Button_AtomicStructure:
+
+        id: but
+        center_x: root.center_x - 60
+        center_y: root.center_y + 40
+        
+    Button_ElementPropoties:
+
+        id: but
+        center_x: root.center_x - 60
+        center_y: root.center_y - 30
+
+        on_press:
+            root.manager.current = 'Screen4' 
+
+    Button_Back3_2:
+
+        id: but
+        center_x: root.center_x - 100
+        center_y: root.center_y - 270
+
+        on_press:
+            root.manager.current = 'Screen2'
+
+
+<Button_AtomicStructure>:
+
+    image: image
+    size: 220 , 50
+    size_hint: None , None    
+    background_color: 0,0,0,0
+    Image: 
+        id: image        
+        size: 420 , 320
+        pos: root.center_x - 189.5 , root.center_y - 152.5
+        source: 'Button_AtomicStructure.PNG'
+
+<Button_ElementPropoties>:
+
+    image: image
+    size: 220 ,50
+    size_hint: None , None    
+    background_color: 0,0,0,0
+    Image: 
+        id: image        
+        size: 420 , 320
+        pos: root.center_x - 185 , root.center_y - 161
+        source: 'Button_ElementPropoties.PNG'
+
+<Button_RadioActive>:
+
+    image: image 
+    size: 220 ,50
+    size_hint: None , None   
+    background_color: 0,0,0,0
+    Image: 
+        id: image        
+        size: 420 , 200
+        pos: root.center_x - 140 , root.center_y - 98
+        source: 'Button_RadioActive.PNG'
+
+<Button_Back3_2>:
+
+    iamge: image
+    size: 60 , 60
+    size_hint: None , None
+    background_color: 0,0,0,0
+    Image:
+        id: image
+        size: 80 , 80
+        pos: root.pos
+        source: 'Button_Back.png'
+
+<Screen4>:
+
+    name: 'Screen4'
+    but: but
+    canvas:
+        Rectangle:
+            source: 'Screen4.jpg'
+            pos: self.pos
+            size: self.size  
+
+    Button_IE_EN:
+
+        id: but
+        center_x: root.center_x - 60
+        center_y: root.center_y - 45
+        
+    
+    Button_AtomicSize:
+
+        id: but        
+        center_x: root.center_x - 40
+        center_y: root.center_y + 35        
+
+        on_press:
+            root.manager.current = 'ScreenAtomicSize'
+
+    Button_Back4_3:
+
+        id: but
+        center_x: root.center_x - 100
+        center_y: root.center_y - 270
+
+        on_press:
+            root.manager.current = 'Screen3'
+            
+<Button_AtomicSize>:
+
+    image: image
+    size: 200 , 50
+    size_hint: None , None    
+    background_color: 0,0,0,0
+    Image:
+        id: image        
+        size: 250 , 250
+        pos: root.center_x - 120 , root.center_y - 120
+        source: 'Button_AtomicSize.PNG'
+
+<Button_IE_EN>:
+
+    image: image
+    size: 150 , 50
+    size_hint: None , None    
+    background_color: 0,0,0,0    
+    Image:
+        id: image        
+        size: 220 , 220
+        pos: root.center_x - 115 , root.center_y - 120
+        source: 'Button_IE_EN.PNG'
+
+<Button_Back4_3>:
+
+    iamge: image
+    size: 60 , 60
+    size_hint: None , None
+    background_color: 0,0,0,0
+    Image:
+        id: image
+        size: 80 , 80
+        pos: root.pos
+        source: 'Button_Back.png'
+
+<ScreenAtomicSize>:
+    
+    name: 'ScreenAtomicSize'
+  
+    canvas:
+        Rectangle:
+            source: 'ScreenAtomicSize.jpg'
+            pos: self.pos
+            size: self.size            
+
+    Button_RunAtom:
+
+        id: but        
+        size: self.texture_size
+        pos: root.center_x + 96 ,root.center_y + 122.5
+        size: 65 , 65          
+
+        on_release:
+            root.ele_import(str(Ele_I.text),str(Ele_II.text))          
+
+    TextInput:
+        id: Ele_I
+        font_size: 45
+        font_name: 'SourceSansPro-Light.otf'
+        size_hint: None, None
+        size: 75 , 75
+        pos: root.center_x - 145 , root.center_y + 0
+        text: ''
+        background_normal: ''
+        background_color: 0,0,0,0.01   
+        multiline: False    
+
+    TextInput:
+        id: Ele_II
+        font_size: 45
+        font_name: 'SourceSansPro-Light.otf'
+        size_hint: None, None
+        size: 75 , 75
+        pos: root.center_x + 30 , root.center_y + 0
+        text: ''
+        background_normal: ''
+        background_color: 0,0,0,0.01   
+        multiline: False
+
+    Mascot2:
+        id: image
+        center_x: root.center_x + 20
+        center_y: root.center_y - 200
+
+    Button_Back4_3:
+
+        id: but
+        center_x: root.center_x - 146
+        center_y: root.center_y - 270
+
+        on_press:
+            root.manager.current = 'Screen4'
+        
+    # Button:
+    #     text: 'Done'
+    #     size: self.texture_size
+    #     font_size: 45
+    #     color: 0,0,0,1
+    #     background_normal: ''
+    #     background_color: 1, 1, 1, 0.5
+    #     pos: root.center_x + 0 ,root.center_y + 0
+    #     size: 250,75
+    #     size_hint: None, None
+    #     on_release: root.ele_import(str(Ele_I.text),str(Ele_II))      
+    
+<Button_RunAtom>:
+
+    image: image    
+    background_color: 0,0,0,0
+
+    Image:             
+        id: image        
+        size: root.size
+        pos: root.pos
+        source: 'Button_RunAtom.PNG'
+
+<Button_BackAS_4>:
+
+    iamge: image
+    size: 60 , 60
+    size_hint: None , None
+    background_color: 0,0,0,0
+    Image:
+        id: image
+        size: 80 , 80
+        pos: root.pos
+        source: 'Button_Back.png'    
+
+<Mascot2>:
+
+    size_hint: None,None
+    Image:
+        id: image
+        size: 120 ,200
+        pos: root.center_x + 35 , root.center_y - 120
+        source: 'Mascot2.png'
+
+
+
+
